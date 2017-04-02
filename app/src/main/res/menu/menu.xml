@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id = "@+id/mnuMonAnChinh"
+        android:title = "Món Ăn Chính">
+    </item>
+
+    <item
+    android:id = "@+id/mnuDoUong"
+    android:title = "Đồ Uống">
+    </item>
+
+    <item
+        android:id = "@+id/mnuDiemTam"
+        android:title = "Điểm Tâm">
+    </item>
+</menu>

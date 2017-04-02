@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "983689015920",
+    "firebase_url": "https://order-1e1ad.firebaseio.com",
+    "project_id": "order-1e1ad",
+    "storage_bucket": "order-1e1ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983689015920:android:887b8c1301b59daf",
+        "android_client_info": {
+          "package_name": "com.example.congvu.demo1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983689015920-fa5k78ht7gof79jslgdtvnmksb2ms5vr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLUZwhAR11Su6sU3ybLjo-QqATCSmRKYE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
