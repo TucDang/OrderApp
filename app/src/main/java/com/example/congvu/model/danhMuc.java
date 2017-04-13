@@ -1,9 +1,11 @@
 package com.example.congvu.model;
 
+import java.io.Serializable;
+
 /**
  * Created by CongVu on 3/15/2017.
  */
-public class danhMuc {
+public class danhMuc implements Serializable{
 
     public int ma;
     public String tenMon;

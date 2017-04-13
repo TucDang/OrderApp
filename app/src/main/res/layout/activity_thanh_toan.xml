@@ -14,28 +14,33 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_weight="0.00"
-        android:text="Danh sách món đã chọn, quý khác vui lòng kiểm tra:"
+        android:text="Danh sách món đã chọn, quý khách vui lòng kiểm tra:"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtTenBanAn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.00"
         android:text="TextView" />
 
     <ListView
+        android:id="@+id/lvThanhToan"
         android:layout_width="match_parent"
-        android:layout_height="256dp"
-        android:layout_weight="0.51" />
+        android:layout_height="340dp"
+        android:layout_weight="0.51"
+        android:elevation="1dp" />
 
     <TextView
         android:id="@+id/txtTongTien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.00"
-        android:text="TextView" />
+        android:text="Tổng tiền: "
+        android:textColor="@android:color/background_dark"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,18 +48,12 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnDatHang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
+            android:text="OK" />
     </LinearLayout>
+
 
 </LinearLayout>

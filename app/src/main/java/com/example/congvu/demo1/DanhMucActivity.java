@@ -21,6 +21,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DanhMucActivity extends AppCompatActivity {
 
@@ -28,7 +30,7 @@ public class DanhMucActivity extends AppCompatActivity {
 
     Button btnback;
     TextView txtThongTinBan;
-    Button btnXemMon;
+    Button btnOrder;
 
     ListView lvMonAnChinh;
     ArrayList<danhMuc> dsMon;
@@ -45,11 +47,16 @@ public class DanhMucActivity extends AppCompatActivity {
     TabHost tabHost;
 
     kbBanAn thongTinBan;
+    public static Map<String,Integer> lMonUserSelect = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danh_muc);
+
+        btnback = (Button) findViewById(R.id.btnback);
+        txtThongTinBan = (TextView) findViewById(R.id.txtThongTinBan);
+        btnOrder = (Button) findViewById(R.id.btnOrder);
 
         lvMonAnChinh = (ListView) findViewById(R.id.lvMonAnChinh);
         dsMon = new ArrayList<>();
@@ -79,6 +86,20 @@ public class DanhMucActivity extends AppCompatActivity {
             }
         });
 
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentThanhToan = new Intent(DanhMucActivity.this, ThanhToan.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("dsMon",dsMon);
+                bundle.putSerializable("dsDoUong",dsDoUong);
+                bundle.putSerializable("dsSinhTo",dsSinhTo);
+                intentThanhToan.putExtra("DANHMUC", bundle);
+                startActivity(intentThanhToan);
+
+            }
+        });
+
     }
 
     @Override
@@ -93,9 +114,6 @@ public class DanhMucActivity extends AppCompatActivity {
     }
 
     private void addControls() {
-        btnback = (Button) findViewById(R.id.btnback);
-        txtThongTinBan = (TextView) findViewById(R.id.txtThongTinBan);
-        btnXemMon = (Button) findViewById(R.id.btnOrder);
 
         Intent intent = getIntent();
         thongTinBan = (kbBanAn) intent.getSerializableExtra("ThongTinBan");
@@ -192,18 +210,6 @@ public class DanhMucActivity extends AppCompatActivity {
         });
 
 
-//        lvDoUong = (ListView) findViewById(R.id.lvDoUong);
-//        dsDoUong = new ArrayList<>();
-//        adapterDoUong = new DanhMucAdapter(DanhMucActivity.this, R.layout.layout_danhmuc, dsDoUong);
-//        lvDoUong.setAdapter(adapterDoUong);
-//
-//        lvSinhTo = (ListView) findViewById(R.id.lvSinhTo);
-//        dsSinhTo = new ArrayList<>();
-//        adapterSinhTo = new DanhMucAdapter(DanhMucActivity.this, R.layout.layout_danhmuc, dsSinhTo);
-//        lvSinhTo.setAdapter(adapterSinhTo);
-
-        //gialapDanhSach();
-
 
         tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
@@ -225,21 +231,4 @@ public class DanhMucActivity extends AppCompatActivity {
 
     }
 
-   /* private void gialapDanhSach() {
-
-        dsMon.add(new danhMuc("Cá Kho", "25.000đ"));
-        dsMon.add(new danhMuc("Gà Xào Xả Ớt", "30.000đ"));
-        dsMon.add(new danhMuc("Bò Né", "35.000đ"));
-        adapterDanhSachMon.notifyDataSetChanged();
-
-        dsDoUong.add(new danhMuc("Sữa Tươi", "10.000đ"));
-        dsDoUong.add(new danhMuc("LipTon", "15.000đ"));
-        dsDoUong.add(new danhMuc("CaFe", "12.000đ"));
-        adapterDoUong.notifyDataSetChanged();;
-
-        dsSinhTo.add(new danhMuc("Sinh Tố Bơ", "15.000đ"));
-        dsSinhTo.add(new danhMuc("Sinh Tố Xoài", "15.000đ"));
-        dsSinhTo.add(new danhMuc("Sinh Tố Dừa", "15.000đ"));
-        adapterSinhTo.notifyDataSetChanged();
-    }*/
 }
