@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backgroud"
+    tools:context="com.example.congvu.demo1.Login">
+
+
+    <EditText
+        android:hint="PassWord"
+        android:textColor="#FF8000"
+        android:textColorHint="#FF8000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextPassword"
+        android:layout_below="@+id/editTextLogin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="KÍNH CHÀO QUÝ KHÁCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:id="@+id/textViewWelcome"
+        android:layout_weight="0.11"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="Email"
+        android:textColor="#FF8000"
+        android:textColorHint="#FF8000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextLogin"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/imgLogin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imgLogin"
+
+        android:layout_height="154dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/textViewWelcome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Đăng Nhập"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/buttonLogin"
+        android:layout_weight="0.20"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:text="Đăng ký thành viên ở đây."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:id="@+id/textViewNextRegister"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Bỏ qua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDish"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp" />
+
+</RelativeLayout>

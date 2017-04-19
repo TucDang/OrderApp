@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BA55D3"
     android:orientation="vertical"
     tools:context="com.example.congvu.demo1.ThanhToan"
     android:weightSum="1">
@@ -13,8 +14,10 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_weight="0.00"
-        android:text="Danh sách món đã chọn, quý khách vui lòng kiểm tra:"
+        android:layout_weight="0.15"
+        android:text="DANH SÁCH CÁC MÓN ĐÃ CHỌN"
+        android:gravity="center_vertical|center"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -28,19 +31,21 @@
     <ListView
         android:id="@+id/lvThanhToan"
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:layout_weight="0.51"
-        android:elevation="1dp" />
+        android:layout_height="270dp"
+        android:elevation="1dp"
+        android:background="#FFBBFF"
+        android:layout_weight="0.39" />
+
 
     <TextView
         android:id="@+id/txtTongTien"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00"
+        android:layout_height="16dp"
         android:text="Tổng tiền: "
-        android:textColor="@android:color/background_dark"
+        android:textColor="#FFFFFF"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_weight="0.49" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,9 +54,10 @@
 
         <Button
             android:id="@+id/btnDatHang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#FFBBFF"
             android:text="OK" />
     </LinearLayout>
 

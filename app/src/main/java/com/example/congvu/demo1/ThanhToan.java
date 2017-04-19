@@ -1,6 +1,7 @@
 package com.example.congvu.demo1;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -10,9 +11,8 @@ import com.example.congvu.adapter.ThanhToanAdapter;
 import com.example.congvu.model.danhMuc;
 import com.example.congvu.model.kbBanAn;
 import com.google.firebase.database.DatabaseReference;
+
 import java.text.NumberFormat;
-
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -22,12 +22,14 @@ public class ThanhToan extends AppCompatActivity {
 
     TextView txtTongTien;
     TextView txtTenBanAn;
+    TextView txtShow;
     ListView lvThanhToan;
     ArrayList<danhMuc> dsThanhToan;
     ThanhToanAdapter thanhToanAdapter;
     Intent intent;
     double tongTien;
     kbBanAn tenBanAn;
+    Typeface face;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,11 @@ public class ThanhToan extends AppCompatActivity {
         txtTongTien = (TextView) findViewById(R.id.txtTongTien);
         txtTenBanAn = (TextView) findViewById(R.id.txtTenBanAn);
         lvThanhToan = (ListView) findViewById(R.id.lvThanhToan);
+        txtShow     = (TextView)findViewById(R.id.textView2);
+
+        face = Typeface.createFromAsset(getAssets(),"fonts/VNF-Sofia Regular.ttf");
+        txtShow.setTypeface(face);
+        txtTongTien.setTypeface(face);
 
         dsThanhToan = new ArrayList<>();
         setDSThanhToan();

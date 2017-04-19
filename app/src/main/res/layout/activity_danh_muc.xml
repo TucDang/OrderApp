@@ -3,27 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FF8000"
     tools:context="com.example.congvu.demo1.DanhMucActivity"
     android:orientation="vertical"
     android:weightSum="1">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/txtThongTinBan"
         android:gravity="center"
-        android:background="#f20e0e"
+        android:background="#CD853F"
         android:textAlignment="center" />
 
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="415dp"
         android:layout_gravity="center_horizontal">
 
         <LinearLayout
@@ -35,7 +32,8 @@
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#fe35f4"></TabWidget>
+                android:background="#F4A460">
+            </TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -46,7 +44,7 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#19f9eb"
+                    android:background="#FFE4B5"
                     android:orientation="vertical">
 
                     <ListView
@@ -59,7 +57,7 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#2bfd07"
+                    android:background="#FFEBCD"
                     android:orientation="vertical">
 
                     <ListView
@@ -72,7 +70,7 @@
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#fbda05"
+                    android:background="#FFEFD5"
                     android:orientation="vertical">
 
                     <ListView
@@ -86,23 +84,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
+        android:background="#F4A460"
         android:orientation="horizontal"
         android:weightSum="1">
 
         <Button
             android:id="@+id/btnback"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:text="Back" />
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:text="Back"
+            android:layout_weight="1.25" />
 
         <Button
             android:id="@+id/btnOrder"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="140dp"
-            android:text="Order" />
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="75dp"
+            android:text="Order"
+            android:layout_weight="0.1" />
 
     </LinearLayout>
 

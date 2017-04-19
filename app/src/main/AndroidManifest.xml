@@ -17,13 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DanhMucActivity">
-            <category android:name="android.intent.category.LAUNCHER" />
+        <activity android:name=".Login">
 
         </activity>
-        <activity android:name=".ThanhToan"
-            android:parentActivityName=".DanhMucActivity">
-        </activity>
+        <activity android:name=".Register"/>
+        <activity android:name=".DanhMucActivity" />
+        <activity android:name=".ThanhToan"></activity>
     </application>
 
 </manifest>

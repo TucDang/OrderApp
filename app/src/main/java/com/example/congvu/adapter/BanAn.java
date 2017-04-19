@@ -1,7 +1,6 @@
 package com.example.congvu.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.congvu.demo1.ChonBanAn;
 import com.example.congvu.demo1.DanhMucActivity;
 import com.example.congvu.demo1.R;
 import com.example.congvu.model.kbBanAn;
@@ -25,6 +23,7 @@ public class BanAn extends ArrayAdapter<kbBanAn>
     Activity context; //Màn hình sử dụng layout này (giao diện này)
     int resource; // Layout cho từng dòng muốn hiển thị
     List<kbBanAn> objects; // Danh sách nguồn dữ liệu muốn hiển thị lên giao diện
+
 
     public BanAn(Activity context, int resource, List<kbBanAn> objects) {
         super(context, resource, objects);
@@ -42,6 +41,10 @@ public class BanAn extends ArrayAdapter<kbBanAn>
         TextView txtTenBanAn = (TextView) row.findViewById(R.id.txtTenBanAn);
         ImageButton btnBanAn = (ImageButton) row.findViewById(R.id.btnBanAn);
 
+
+
+
+
         // Trả về Bàn Ăn hiện tại muốn vẽ
         final kbBanAn kbBanAn = this.objects.get(position);
         txtTenBanAn.setText(kbBanAn.getTen());
@@ -56,10 +59,13 @@ public class BanAn extends ArrayAdapter<kbBanAn>
         return row;
     }
 
+
+
     private void xuLyChuyenDoiToDM(kbBanAn kbBanAn) {
         Intent intenttoDanhMuc = new Intent(this.context, DanhMucActivity.class);
         intenttoDanhMuc.putExtra("ThongTinBan", kbBanAn);
         this.context.startActivity(intenttoDanhMuc);
 
     }
+
 }

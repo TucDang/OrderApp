@@ -1,5 +1,6 @@
 package com.example.congvu.demo1;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
@@ -21,6 +22,7 @@ public class ChonBanAn extends AppCompatActivity {
     GridView gvChonBanAn;
     ArrayList<kbBanAn> dsBanAn;
     BanAn banAnAdapter;
+    Typeface face;
     //ArrayList<String> mangBanAn;
     //ArrayAdapter arrayAdapter = null;
     TextView textView;
@@ -35,6 +37,10 @@ public class ChonBanAn extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
         gvChonBanAn = (GridView) findViewById(R.id.gvChonBanAn);
         dsBanAn = new ArrayList<kbBanAn>();
+        face = Typeface.createFromAsset(getAssets(),"fonts/VNF-Sofia Regular.ttf");
+        textView.setTypeface(face);
+
+
 
         banAnAdapter = new BanAn(
                 ChonBanAn.this,
@@ -50,6 +56,7 @@ public class ChonBanAn extends AppCompatActivity {
                 //mangBanAn.add(banAn.ma + "-" +banAn.ten);
                 //arrayAdapter.notifyDataSetChanged();
                 dsBanAn.add(new kbBanAn(banAn.ma, banAn.ten));
+
                 banAnAdapter.notifyDataSetChanged();
             }
 

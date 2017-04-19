@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backgroud"
+    tools:context="com.example.congvu.demo1.Register">
+
+    <TextView
+        android:text="CHÀO MỪNG QUÝ KHÁCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:id="@+id/textViewWelcome"
+        android:layout_weight="0.15"
+        android:layout_marginTop="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Quay lại để đăng nhập"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewBackLogin"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:text="Đăng Ký"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/buttonRegister"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/editTextConfirmPass"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="Nhập Email Của Bạn"
+        android:textColor="#FF8000"
+        android:textColorHint="#FF8000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextEmail"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:hint="Nhập Password"
+        android:textColor="#FF8000"
+        android:textColorHint="#FF8000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextPass"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:hint="Nhập lại PassWord"
+        android:textColor="#FF8000"
+        android:textColorHint="#FF8000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextConfirmPass"
+        android:layout_below="@+id/editTextPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+</RelativeLayout>
